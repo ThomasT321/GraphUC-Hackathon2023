@@ -1,0 +1,6 @@
+Creation of Virtual Environment:
+python -m venv venv
+
+
+Flask installation:
+pip install flask
