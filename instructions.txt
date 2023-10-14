@@ -1,0 +1,25 @@
+Creation of Virtual Environment:
+python -m venv venv
+
+General installs:
+pip install -r requirements.txt
+
+To connect the chat bot in the future we will need to download models to 
+our local machines and run them locally but for now you can sign up on 
+the openai website to get a free trial (and free requests to their api)
+
+Once you've signed up go to the api key page, create an api key then create
+a file with the name ".env" in the base directory and put in that file this:
+
+OPENAI_API_KEY="the api key you generated on openai's website"
+
+
+
+Substitute your api key in the quotes.
+
+IMPORTANT: NEVER and i mean NEVER push an api key to github
+there are bots scraping public git repos for accidents like this
+and they will steal that api key and use it as much as possible
+
+You should then be all good to run the debug configuration and test the server
+yourself
