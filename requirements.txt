@@ -4,3 +4,4 @@ graphene>=3.1
 gql
 requests-toolbelt
 openai
+python-dotenv

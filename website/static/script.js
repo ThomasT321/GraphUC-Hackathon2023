@@ -7,12 +7,12 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
 
     // Define the data to be sent
     const data = {
-        text: user_request,
-        id: graph_url
+        user_request: user_request,
+        graph_url: graph_url
     };
 
     // Send the data to the Flask server using the Fetch API
-    fetch("", {
+    fetch("http://127.0.0.1:5000/chatapi", {
         method: "POST", // Use POST method to send data
         headers: {
             "Content-Type": "application/json" // Set the content type to JSON
