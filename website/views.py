@@ -143,7 +143,7 @@ def chat_api():
     print(result)
     print(type(jsonify(result)))
 
-    return render_template('base.html', context={'result':jsonify(result)})
+    return jsonify(result)
 """
 Summary:
 handles a user request with json body of format:
