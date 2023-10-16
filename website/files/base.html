@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hackathon Project</title>
-    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -17,11 +17,11 @@
             <label for="idNumber">Graph ID Number:</label>
             <textarea type="text" id="idNumber"></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit" id="send-button">Submit</button>
         </form>
     </div>
     <div>
-        <img src="../static/the-graph-grt-logo.png" width="100" height="100" alt="TheGraphLogo" class="graphlogo">
+        <img src="the-graph-grt-logo.png" width="100" height="100" alt="TheGraphLogo" class="graphlogo">
         <h1>GTS</h1>
         <h1>Graph-To-Speech</h1>
     </div>
@@ -29,7 +29,7 @@
     <div class="outputarea">
         <div>
             <h1>Response</h1>
-            <div class="response">
+            <div id="response">
                 {% if request.method == "POST" %}
                 {{result}}
                 {% else %}
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-    <script src="../static/script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 

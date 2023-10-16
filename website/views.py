@@ -7,7 +7,7 @@ import dotenv
 
 import requests
 
-from flask import request,jsonify
+from flask import request, jsonify, send_file 
 from langchain.llms import OpenAI
 from langchain.agents import load_tools, initialize_agent, AgentType
 
@@ -109,7 +109,7 @@ def get_schema(connection_string: str) -> str:
 
 # Code for routing goes here
 @views.route("/chatapi", methods=['GET','POST'])
-def chat_api() -> str:
+def chat_api():
     if request.method == "POST":
         request_body = request.get_json()
 
@@ -135,12 +135,13 @@ def chat_api() -> str:
             + get_schema(request_body["graph_url"]) + "\n"
             + request_body["user_request"] 
         )
+        result = {"message": result}
     else:
         result = {}
     print(result)
     print(type(jsonify(result)))
 
-    return render_template('base.html', context={'result':jsonify(result)})
+    return jsonify(result)
 """
 Summary:
 handles a user request with json body of format:
@@ -152,3 +153,10 @@ handles a user request with json body of format:
 Returns:
   str: the chat bots response to the users request
 """
+
+@views.route("/<filename>", methods=['GET','POST'])
+def doc(filename):
+  try:
+    return send_file(os.path.join('files/', filename))
+  except:
+    return "404 not found"
