@@ -5,3 +5,4 @@ gql
 requests-toolbelt
 openai
 python-dotenv
+flask_cors

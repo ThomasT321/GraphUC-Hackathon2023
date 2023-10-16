@@ -109,9 +109,11 @@ def get_schema(connection_string: str) -> str:
 
 # Code for routing goes here
 @views.route("/chatapi", methods=['GET','POST'])
-def chat_api() -> str:
+def chat_api():
     if request.method == "POST":
+        print(request.headers)
         request_body = request.get_json()
+        print("debug marker")
 
         dotenv.load_dotenv("./.env")
         llm = OpenAI(openai_api_key=os.getenv("OPENAI_API_KEY"))
@@ -140,7 +142,7 @@ def chat_api() -> str:
     print(result)
     print(type(jsonify(result)))
 
-    return render_template('base.html', context={'result':jsonify(result)})
+    return render_template('base.html', context=jsonify(result = result))
 """
 Summary:
 handles a user request with json body of format:

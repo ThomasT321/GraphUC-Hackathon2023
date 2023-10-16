@@ -15,7 +15,7 @@ document.getElementById("myForm").addEventListener("submit", function (event) {
     fetch("http://127.0.0.1:5000/chatapi", {
         method: "POST", // Use POST method to send data
         headers: {
-            "Content-Type": "application/json" // Set the content type to JSON
+            "Content-Type": "application/json", // Set the content type to JSON
         },
         body: JSON.stringify(data) // Convert data to JSON format
     })
