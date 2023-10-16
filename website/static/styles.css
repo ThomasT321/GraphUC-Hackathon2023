@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #fff; /* Light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 60vh; /* Ensure minimum full viewport height */
+}
+
+.inputarea {
+    background-color: #1a1a1a; /* Slightly lighter background for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px;
+    width: 45%; /* Maximize space utilization */
+}
+
+.outputarea {
+    background-color: #1a1a1a; /* Slightly lighter background for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 50px;
+    width: 45%; /* Maximize space utilization */
+    max-width: 45%;
+}
+
+h1 {
+    text-align: center;
+    color: #6F4DFF; /* Purple text color */
+    margin-bottom: 20px;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #6F4DFF; /* Purple label text color */
+}
+
+
+textarea {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #383838; /* Darker border color */
+    border-radius: 5px;
+    background-color: #1a1a1a; /* Dark input background */
+    color: #fff; /* Light text color */
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 500px;
+}
+
+button {
+    background-color: #6F4DFF; /* Purple button background color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 60%;
+    height: 65px;
+    margin-top: 35px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #6a0c9a; /* Darker purple on hover */
+    color: #dfdfdf;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.result {
+    margin-top: 20px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.graphlogo {
+    padding-left: 25%;
+    padding-top: 15px;
+}
+
+.response {
+    background-color: #1a1a1a; /* Slightly lighter background for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5%;
+    width: 80%; /* Maximize space utilization */
+    min-height: 80%;
+    word-wrap: break-word; /* Allow breaking within words if necessary */
+
+}
